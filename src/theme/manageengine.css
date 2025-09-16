@@ -311,3 +311,35 @@
   --meua-color-button-aa-hover:   #A84300;
   --meua-color-button-aa-active:  #993D00;
 }
+[data-carbon-theme="manageengine-dark"] {
+  --cds-button-primary:         var(--meua-color-button-aa);
+  --cds-button-primary-hover:   var(--meua-color-button-aa-hover);
+  --cds-button-primary-active:  var(--meua-color-button-aa-active);
+  --cds-link-primary: var(--meua-color-primary-500);
+  --cds-focus:        rgb(255 102 0 / 0.35);
+}
+[data-carbon-theme="manageengine-dark"] .cds--btn--primary {
+  background-color: var(--cds-button-primary) !important;
+  border-color:     var(--cds-button-primary) !important;
+}
+[data-carbon-theme="manageengine-dark"] .cds--btn--primary:hover {
+  background-color: var(--cds-button-primary-hover) !important;
+  border-color:     var(--cds-button-primary-hover) !important;
+}
+[data-carbon-theme="manageengine-dark"] .cds--btn--primary:active,
+[data-carbon-theme="manageengine-dark"] .cds--btn--primary[aria-pressed="true"] {
+  background-color: var(--cds-button-primary-active) !important;
+  border-color:     var(--cds-button-primary-active) !important;
+}
+[data-carbon-theme="manageengine-dark"] {
+  --meua-color-button-aa: #C44D00;
+  --meua-color-button-aa-hover: #A84300;
+  --meua-color-button-aa-active: #993D00;
+
+  --cds-button-primary: var(--meua-color-button-aa);
+  --cds-button-primary-hover: var(--meua-color-button-aa-hover);
+  --cds-button-primary-active: var(--meua-color-button-aa-active);
+
+  --cds-link-primary: var(--meua-color-primary-500);
+  --cds-focus: var(--meua-color-primary-500);
+}
