@@ -16,7 +16,7 @@
   "dependencies": {
     "@carbon/react": "^1.91.0",
     "@carbon/styles": "^1.90.0",
-    "@meua/theme": "file:meua-theme-0.1.0.tgz",
+    "@meua/theme": "workspace:*",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
@@ -47,5 +47,8 @@
     "typescript-eslint": "^8.39.1",
     "vite": "^7.1.2",
     "vitest": "^3.2.4"
-  }
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }
