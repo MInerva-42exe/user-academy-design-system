@@ -343,3 +343,9 @@
   --cds-link-primary: var(--meua-color-primary-500);
   --cds-focus: var(--meua-color-primary-500);
 }
+
+[data-carbon-theme="manageengine-dark"]{
+  --cds-button-primary:         var(--meua-color-primary-600);
+  --cds-button-primary-hover:   var(--meua-color-primary-700);
+  --cds-button-primary-active:  var(--meua-color-primary-800);
+}
