@@ -1,0 +1,42 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "plugins": ["stylelint-declaration-strict-value"],
+  "ignoreFiles": [
+    "src/stories/**/*.css",
+    "src/App.css",
+    "src/index.css",
+    "src/theme/tokens.css",
+    "src/theme/manageengine.css",
+    "packages/**/dist/**/*.css"
+  ],
+  "rules": {
+    "scale-unlimited/declaration-strict-value": [
+      [
+        "/color$/",
+        "background",
+        "background-color",
+        "border",
+        "border-color",
+        "outline",
+        "outline-color",
+        "fill",
+        "stroke"
+      ],
+      {
+        "disableFix": true,
+        "ignoreValues": ["inherit", "transparent", "currentColor", "/^var\\(--/"],
+        "message": "Use design tokens (var(--meua-…)) instead of raw values."
+      }
+    ],
+    "selector-class-pattern": null,
+    "no-descending-specificity": null,
+    "color-hex-length": null,
+    "value-keyword-case": null,
+    "color-function-notation": "modern",
+    "alpha-value-notation": "number",
+    "comment-empty-line-before": null,
+    "rule-empty-line-before": null,
+    "custom-property-empty-line-before": null,
+    "no-duplicate-selectors": null
+  }
+}

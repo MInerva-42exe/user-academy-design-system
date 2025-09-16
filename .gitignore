@@ -1,0 +1,17 @@
+# node / build
+node_modules/
+dist/
+.storybook-out/
+storybook-static/
+.vite/
+*.log
+.DS_Store
+
+# env
+.env*
+!.env.example
+
+# generated theme artifacts
+src/theme/tokens.css
+packages/**/dist/
+*.tgz

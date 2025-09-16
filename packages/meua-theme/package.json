@@ -1,0 +1,12 @@
+{
+  "name": "@meua/theme",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "ManageEngine User Academy theme for Carbon (tokens + CSS mapping).",
+  "sideEffects": false,
+  "files": ["dist", "tokens"],
+  "exports": {
+    "./tokens.css": "./dist/tokens.css",
+    "./manageengine.css": "./dist/manageengine.css"
+  }
+}

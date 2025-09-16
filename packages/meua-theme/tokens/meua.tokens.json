@@ -1,0 +1,237 @@
+{
+  "version": "1.0",
+  "meta": {
+    "name": "ManageEngine User Academy – Design Tokens",
+    "updated": "2025-09-15T00:00:00.000Z",
+    "source": "Adjusted for Figma Variables export"
+  },
+
+  "color": {
+    "$type": "color",
+    "primary": {
+      "500": { "$value": "#FF6600" },
+      "600": { "$value": "#E65C00" },
+      "50":  { "$value": "#FFF2E8" }
+    },
+    "base": {
+      "black": { "$value": "#000000" },
+      "white": { "$value": "#FFFFFF" }
+    },
+    "gray": {
+      "50":  { "$value": "#F5F5F5" },
+      "400": { "$value": "#999999" },
+      "800": { "$value": "#333333" }
+    },
+    "semantic": {
+      "bg":        { "$value": "{color.base.white}" },
+      "surface":   { "$value": "{color.base.white}" },
+      "text":      { "$value": "{color.base.black}" },
+      "mutedText": { "$value": "{color.gray.800}" },
+      "border":    { "$value": "{color.gray.400}" },
+      "focus":     { "$value": "{color.primary.500}" },
+      "accent":    { "$value": "{color.primary.500}" }
+    }
+  },
+
+  "typography": {
+    "$type": "typography",
+    "fontFamilies": {
+      "brand": { "$type": "fontFamilies", "$value": "Zoho Puvi" }
+    },
+    "weights": {
+      "$type": "fontWeights",
+      "regular":  { "$value": "Regular" },
+      "medium":   { "$value": "Medium" },
+      "semibold": { "$value": "SemiBold" },
+      "bold":     { "$value": "Bold" }
+    },
+    "lineHeights": {
+      "$type": "lineHeights",
+      "tight": { "$value": "110%" },
+      "snug":  { "$value": "120%" },
+      "normal":{ "$value": "140%" }
+    },
+    "fontSizes": {
+      "$type": "fontSizes",
+      "xs": { "$value": "12px" },
+      "sm": { "$value": "14px" },
+      "md": { "$value": "16px" },
+      "lg": { "$value": "20px" },
+      "xl": { "$value": "24px" },
+      "2xl":{ "$value": "32px" }
+    },
+    "letterSpacing": {
+      "$type": "letterSpacing",
+      "tight":  { "$value": "0%" },
+      "normal": { "$value": "0%" }
+    },
+    "styles": {
+      "h1": {
+        "$value": {
+          "fontFamily": "{typography.fontFamilies.brand}",
+          "fontWeight": "{typography.weights.bold}",
+          "fontSize": "{typography.fontSizes.2xl}",
+          "lineHeight": "{typography.lineHeights.snug}",
+          "letterSpacing": "{typography.letterSpacing.normal}"
+        }
+      },
+      "h2": {
+        "$value": {
+          "fontFamily": "{typography.fontFamilies.brand}",
+          "fontWeight": "{typography.weights.semibold}",
+          "fontSize": "{typography.fontSizes.xl}",
+          "lineHeight": "{typography.lineHeights.snug}",
+          "letterSpacing": "{typography.letterSpacing.normal}"
+        }
+      },
+      "h3": {
+        "$value": {
+          "fontFamily": "{typography.fontFamilies.brand}",
+          "fontWeight": "{typography.weights.medium}",
+          "fontSize": "{typography.fontSizes.lg}",
+          "lineHeight": "{typography.lineHeights.snug}",
+          "letterSpacing": "{typography.letterSpacing.normal}"
+        }
+      },
+      "body": {
+        "$value": {
+          "fontFamily": "{typography.fontFamilies.brand}",
+          "fontWeight": "{typography.weights.regular}",
+          "fontSize": "{typography.fontSizes.md}",
+          "lineHeight": "{typography.lineHeights.normal}",
+          "letterSpacing": "{typography.letterSpacing.normal}"
+        }
+      },
+      "small": {
+        "$value": {
+          "fontFamily": "{typography.fontFamilies.brand}",
+          "fontWeight": "{typography.weights.regular}",
+          "fontSize": "{typography.fontSizes.sm}",
+          "lineHeight": "{typography.lineHeights.normal}",
+          "letterSpacing": "{typography.letterSpacing.normal}"
+        }
+      }
+    }
+  },
+
+  "radius": {
+    "default": { "$type": "dimension", "$value": "8px" },
+    "control": { "$type": "dimension", "$value": "6px" },
+    "pill":    { "$type": "dimension", "$value": "999px" }
+  },
+
+  "spacing": {
+    "4":  { "$type": "dimension", "$value": "4px" },
+    "8":  { "$type": "dimension", "$value": "8px" },
+    "12": { "$type": "dimension", "$value": "12px" },
+    "16": { "$type": "dimension", "$value": "16px" },
+    "24": { "$type": "dimension", "$value": "24px" },
+    "32": { "$type": "dimension", "$value": "32px" },
+    "48": { "$type": "dimension", "$value": "48px" }
+  },
+
+  "shadow": {
+    "$type": "boxShadow",
+    "card": {
+      "$value": { "x": "0px", "y": "4px", "blur": "12px", "spread": "0px", "color": "rgba(0,0,0,0.10)" }
+    },
+    "focus": {
+      "$value": { "x": "0px", "y": "0px", "blur": "0px", "spread": "3px", "color": "rgba(255,102,0,0.35)" }
+    },
+    "none": {
+      "$value": { "x": "0px", "y": "0px", "blur": "0px", "spread": "0px", "color": "rgba(0,0,0,0)" }
+    }
+  },
+
+  "composition": {
+    "$type": "composition",
+    "button": {
+      "primary": {
+        "default": {
+          "$value": {
+            "backgroundColor": "{color.primary.500}",
+            "color": "{color.base.white}",
+            "borderColor": "{color.primary.500}",
+            "borderWidth": "0px",
+            "borderRadius": "{radius.control}",
+            "paddingX": "{spacing.16}",
+            "paddingY": "{spacing.12}",
+            "font": "{typography.styles.body}",
+            "shadow": "{shadow.none}"
+          }
+        },
+        "hover": {
+          "$value": {
+            "backgroundColor": "{color.primary.600}",
+            "color": "{color.base.white}"
+          }
+        },
+        "focus": {
+          "$value": {
+            "outlineColor": "{color.semantic.focus}",
+            "outlineWidth": "3px",
+            "outlineStyle": "solid"
+          }
+        }
+      },
+      "secondary": {
+        "default": {
+          "$value": {
+            "backgroundColor": "{color.base.white}",
+            "color": "{color.primary.500}",
+            "borderColor": "{color.primary.500}",
+            "borderWidth": "1px",
+            "borderRadius": "{radius.control}",
+            "paddingX": "{spacing.16}",
+            "paddingY": "{spacing.12}",
+            "font": "{typography.styles.body}"
+          }
+        },
+        "hover": {
+          "$value": {
+            "backgroundColor": "{color.primary.50}",
+            "color": "{color.primary.500}",
+            "borderColor": "{color.primary.500}"
+          }
+        },
+        "focus": {
+          "$value": {
+            "outlineColor": "{color.semantic.focus}",
+            "outlineWidth": "3px",
+            "outlineStyle": "solid"
+          }
+        }
+      }
+    },
+    "input": {
+      "default": {
+        "$value": {
+          "backgroundColor": "{color.base.white}",
+          "color": "{color.semantic.text}",
+          "borderColor": "{color.semantic.border}",
+          "borderWidth": "1px",
+          "borderRadius": "{radius.control}",
+          "paddingX": "{spacing.12}",
+          "paddingY": "{spacing.12}",
+          "font": "{typography.styles.body}"
+        }
+      },
+      "focus": {
+        "$value": {
+          "borderColor": "{color.semantic.focus}",
+          "shadow": "{shadow.focus}"
+        }
+      }
+    },
+    "card": {
+      "default": {
+        "$value": {
+          "backgroundColor": "{color.semantic.surface}",
+          "borderRadius": "{radius.default}",
+          "padding": "{spacing.24}",
+          "shadow": "{shadow.card}"
+        }
+      }
+    }
+  }
+}

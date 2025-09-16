@@ -1,0 +1,313 @@
+
+/* ManageEngine User Academy — Carbon-themed mapping
+   Drop this file after the Carbon CSS bundle.
+   Activate with: <Theme theme="g10" data-carbon-theme="manageengine">...</Theme>
+*/
+
+/* 1) Brand tokens as CSS variables (names mirror your JSON) */
+:root {
+  /* Color primitives */
+  --meua-color-primary-50:  #FFF2E8;
+  --meua-color-primary-500: #FF6600;
+  --meua-color-primary-600: #E65C00;
+
+  --meua-color-base-black:  #000000;
+  --meua-color-base-white:  #FFFFFF;
+
+  --meua-color-gray-50:     #F5F5F5;
+  --meua-color-gray-400:    #999999;
+  --meua-color-gray-800:    #333333;
+
+  /* Semantic colors */
+  --meua-color-bg:          var(--meua-color-base-white);
+  --meua-color-surface:     var(--meua-color-base-white);
+  --meua-color-text:        var(--meua-color-base-black);
+  --meua-color-text-muted:  var(--meua-color-gray-800);
+  --meua-color-border:      var(--meua-color-gray-400);
+  --meua-color-focus:       var(--meua-color-primary-500);
+  --meua-color-accent:      var(--meua-color-primary-500);
+
+  /* Typography */
+  --meua-font-family-brand: "Zoho Puvi", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --meua-font-weight-regular: 400;
+  --meua-font-weight-medium: 500;
+  --meua-font-weight-semibold: 600;
+  --meua-font-weight-bold: 700;
+  --meua-line-height-tight: 1.1;
+  --meua-line-height-snug:  1.2;
+  --meua-line-height-normal:1.4;
+  --meua-font-size-xs: 12px;
+  --meua-font-size-sm: 14px;
+  --meua-font-size-md: 16px;
+  --meua-font-size-lg: 20px;
+  --meua-font-size-xl: 24px;
+  --meua-font-size-2xl:32px;
+
+  /* Radius */
+  --meua-radius-default: 8px;
+  --meua-radius-control: 6px;
+  --meua-radius-pill:    999px;
+
+  /* Spacing */
+  --meua-space-4:  4px;
+  --meua-space-8:  8px;
+  --meua-space-12: 12px;
+  --meua-space-16: 16px;
+  --meua-space-24: 24px;
+  --meua-space-32: 32px;
+  --meua-space-48: 48px;
+
+  /* Shadows */
+  --meua-shadow-card: 0 4px 12px rgb(0 0 0 / 0.10);
+  --meua-shadow-focus: 0 0 0 3px rgb(255 102 0 / 0.35);
+  --meua-shadow-none: 0 0 0 0 rgb(0 0 0 / 0);
+}
+
+/* 2) Carbon theme mapping (g10 baseline) */
+[data-carbon-theme="manageengine"] {
+  /* Background & layers */
+  --cds-background: var(--meua-color-bg);
+  --cds-background-hover: color-mix(in sRGB, var(--meua-color-gray-50) 12%, transparent);
+  --cds-background-active: color-mix(in sRGB, var(--meua-color-gray-50) 50%, transparent);
+  --cds-background-selected: color-mix(in sRGB, var(--meua-color-gray-50) 20%, transparent);
+  --cds-background-selected-hover: color-mix(in sRGB, var(--meua-color-gray-50) 32%, transparent);
+  --cds-background-inverse: #393939; /* keep Carbon inverse for contrast */
+  --cds-background-inverse-hover: #4c4c4c;
+  --cds-background-brand: var(--meua-color-accent);
+
+  --cds-layer-01: var(--meua-color-surface);
+  --cds-layer-02: var(--meua-color-surface);
+  --cds-layer-03: var(--meua-color-surface);
+  --cds-layer-hover-01: var(--meua-color-gray-50);
+  --cds-layer-hover-02: var(--meua-color-gray-50);
+  --cds-layer-hover-03: var(--meua-color-gray-50);
+  --cds-layer-selected-01: var(--meua-color-primary-50);
+  --cds-layer-selected-02: var(--meua-color-primary-50);
+  --cds-layer-selected-03: var(--meua-color-primary-50);
+  --cds-layer-selected-hover-01: var(--meua-color-primary-50);
+  --cds-layer-selected-hover-02: var(--meua-color-primary-50);
+  --cds-layer-selected-hover-03: var(--meua-color-primary-50);
+
+  /* Fields */
+  --cds-field-01: var(--meua-color-surface);
+  --cds-field-02: var(--meua-color-surface);
+  --cds-field-03: var(--meua-color-surface);
+
+  /* Borders */
+  --cds-border-subtle-00: var(--meua-color-border);
+  --cds-border-subtle-01: var(--meua-color-border);
+  --cds-border-subtle-02: var(--meua-color-border);
+  --cds-border-strong-01: var(--meua-color-gray-800);
+  --cds-border-strong-02: var(--meua-color-gray-800);
+  --cds-border-strong-03: var(--meua-color-gray-800);
+  --cds-border-inverse: var(--meua-color-base-black);
+
+  /* Text & icons */
+  --cds-text-primary: var(--meua-color-text);
+  --cds-text-secondary: var(--meua-color-text-muted);
+  --cds-text-placeholder: #a8a8a8;
+  --cds-text-inverse: var(--meua-color-base-white);
+  --cds-text-on-color: var(--meua-color-base-white); /* NOTE: consider black for AA on orange */
+  --cds-text-on-color-disabled: #8d8d8d;
+  --cds-text-helper: #6f6f6f;
+  --cds-text-error: #da1e28;
+
+  --cds-icon-primary: var(--meua-color-text);
+  --cds-icon-secondary: var(--meua-color-text-muted);
+  --cds-icon-inverse: var(--meua-color-base-white);
+  --cds-icon-on-color: var(--meua-color-base-white);
+
+  /* Links */
+  --cds-link-primary: var(--meua-color-accent);
+  --cds-link-primary-hover: var(--meua-color-primary-600);
+  --cds-link-inverse: #78a9ff; /* keep Carbon default for inverse surfaces */
+
+  /* Interactive / brand */
+  --cds-interactive: var(--meua-color-accent);
+  --cds-focus: var(--meua-color-focus);
+
+  /* Misc */
+  --cds-highlight: var(--meua-color-primary-50);
+}
+
+/* 3) Optional: brand typography inheritance */
+[data-carbon-theme="manageengine"] body {
+  font-family: var(--meua-font-family-brand);
+}
+
+/* 4) Helpful component tweaks (non-destructive) */
+[data-carbon-theme="manageengine"] .cds--btn--primary {
+  border-radius: var(--meua-radius-control);
+  /* If you need AA contrast for text on orange buttons, uncomment the next line */
+  /* --cds-text-on-color: #000; */
+}
+
+[data-carbon-theme="manageengine"] .cds--tile,
+[data-carbon-theme="manageengine"] .cds--card {
+  border-radius: var(--meua-radius-default);
+  box-shadow: var(--meua-shadow-card);
+}
+
+/* Button color mapping (Carbon primary) */
+[data-carbon-theme="manageengine"] {
+  --cds-button-primary: var(--meua-color-accent);
+  --cds-button-primary-hover: var(--meua-color-primary-600);
+  --cds-button-primary-active: var(--meua-color-primary-600);
+  /* Optional for AA: use black text on orange */
+  /* --cds-text-on-color: #000; */
+}
+
+/* Safeguard for older Carbon builds */
+[data-carbon-theme="manageengine"] .cds--btn--primary {
+  background-color: var(--meua-color-accent);
+  border-color: var(--meua-color-accent);
+}
+[data-carbon-theme="manageengine"] .cds--btn--primary:hover {
+  background-color: var(--meua-color-primary-600);
+  border-color: var(--meua-color-primary-600);
+}
+
+/* Keep white text on buttons — darken button surfaces for AA */
+[data-carbon-theme="manageengine"] {
+  --cds-text-on-color: #fff;       /* force white text */
+  --cds-button-primary: var(--meua-color-button-aa);   /* 4.76:1 vs #fff (passes AA) */
+  --cds-button-primary-hover: var(--meua-color-button-aa-hover);
+  --cds-button-primary-active: var(--meua-color-button-aa-active);
+}
+
+/* Typography: apply brand font to everything inside the theme boundary */
+[data-carbon-theme="manageengine"] {
+  font-family: var(--meua-font-family-brand);
+}
+
+/* Cohesive radii */
+[data-carbon-theme="manageengine"] .cds--btn { border-radius: var(--meua-radius-control); }
+[data-carbon-theme="manageengine"] .cds--text-input { border-radius: var(--meua-radius-control); }
+[data-carbon-theme="manageengine"] .cds--select-input,
+[data-carbon-theme="manageengine"] .cds--dropdown,
+[data-carbon-theme="manageengine"] .cds--list-box__field { border-radius: var(--meua-radius-control); }
+[data-carbon-theme="manageengine"] .cds--tile,
+[data-carbon-theme="manageengine"] .cds--card {
+  border-radius: var(--meua-radius-default);
+  box-shadow: var(--meua-shadow-card);
+}
+
+/* Input focus: orange ring */
+[data-carbon-theme="manageengine"] .cds--text-input:focus,
+[data-carbon-theme="manageengine"] .cds--text-input:focus-visible {
+  outline: none;
+  border-color: var(--meua-color-focus);
+  box-shadow: var(--meua-shadow-focus);
+}
+
+/* Density presets using our spacing tokens */
+[data-carbon-theme="manageengine"][data-density="comfortable"] .cds--btn {
+  min-height: 40px;
+  padding-inline: var(--meua-space-16);
+}
+[data-carbon-theme="manageengine"][data-density="comfortable"] .cds--text-input {
+  min-height: 40px;
+  padding-inline: var(--meua-space-12);
+  padding-block: var(--meua-space-12);
+}
+
+[data-carbon-theme="manageengine"][data-density="compact"] .cds--btn {
+  min-height: 32px;
+  padding-inline: var(--meua-space-12);
+}
+[data-carbon-theme="manageengine"][data-density="compact"] .cds--text-input {
+  min-height: 32px;
+  padding-inline: var(--meua-space-8);
+  padding-block: var(--meua-space-8);
+}
+
+/* Link tokens + hover color */
+[data-carbon-theme="manageengine"] {
+  --cds-link-primary: var(--meua-color-accent);        /* #FF6600 */
+  --cds-link-primary-hover: var(--meua-color-primary-600); /* #E65C00 */
+}
+
+/* Link style: underline on hover, no underline at rest */
+[data-carbon-theme="manageengine"] a.cds--link {
+  text-decoration: none;
+}
+[data-carbon-theme="manageengine"] a.cds--link:hover {
+  text-decoration: underline;
+}
+
+/* Consistent focus ring for keyboard users */
+[data-carbon-theme="manageengine"] .cds--btn:focus-visible,
+[data-carbon-theme="manageengine"] .cds--text-input:focus-visible,
+[data-carbon-theme="manageengine"] a.cds--link:focus-visible {
+  outline: none;
+  box-shadow: var(--meua-shadow-focus); /* orange 3px glow */
+  border-color: var(--meua-color-focus);
+}
+
+/* ===== Dark variant ===== */
+[data-carbon-theme="manageengine-dark"] {
+  /* Surfaces */
+  --cds-background: #161616;
+  --cds-background-hover: #1f1f1f;
+  --cds-background-active: #0f0f0f;
+  --cds-layer-01: #262626;
+  --cds-layer-02: #333333;
+  --cds-layer-03: #393939;
+  --cds-layer-hover-01: #2e2e2e;
+  --cds-layer-hover-02: #3a3a3a;
+  --cds-layer-hover-03: #424242;
+  --cds-layer-selected-01: #2a2a2a;
+  --cds-layer-selected-02: #383838;
+  --cds-layer-selected-03: #404040;
+
+  /* Borders */
+  --cds-border-subtle-00: #3d3d3d;
+  --cds-border-subtle-01: #3d3d3d;
+  --cds-border-subtle-02: #3d3d3d;
+  --cds-border-strong-01: #6f6f6f;
+  --cds-border-strong-02: #6f6f6f;
+  --cds-border-strong-03: #6f6f6f;
+  --cds-border-inverse: #ffffff;
+
+  /* Text & icons */
+  --cds-text-primary: #f4f4f4;
+  --cds-text-secondary: #c6c6c6;
+  --cds-text-inverse: #161616;
+  --cds-text-on-color: #ffffff;
+  --cds-icon-primary: #f4f4f4;
+  --cds-icon-secondary: #c6c6c6;
+  --cds-icon-inverse: #161616;
+
+  /* Links */
+  --cds-link-primary: var(--meua-color-accent);          /* #FF6600 */
+  --cds-link-primary-hover: var(--meua-color-primary-600);/* #E65C00 */
+
+  /* Focus & interactive */
+  --cds-interactive: var(--meua-color-accent);
+  --cds-focus: var(--meua-color-focus);
+
+  /* Buttons (keep white text, darken base for AA) */
+  --cds-button-primary: var(--meua-color-button-aa);
+  --cds-button-primary-hover: var(--meua-color-button-aa-hover);
+  --cds-button-primary-active: var(--meua-color-button-aa-active);
+}
+
+/* Nice body font in dark too */
+[data-carbon-theme="manageengine-dark"] {
+  font-family: var(--meua-font-family-brand);
+}
+
+/* Keep radius/shadow tweaks */
+[data-carbon-theme="manageengine-dark"] .cds--btn { border-radius: var(--meua-radius-control); }
+[data-carbon-theme="manageengine-dark"] .cds--tile,
+[data-carbon-theme="manageengine-dark"] .cds--card {
+  border-radius: var(--meua-radius-default);
+  box-shadow: var(--meua-shadow-card);
+}
+
+/* AA-safe button tones, exposed as variables (so linter accepts var()) */
+[data-carbon-theme="manageengine"] {
+  --meua-color-button-aa:         #C44D00;
+  --meua-color-button-aa-hover:   #A84300;
+  --meua-color-button-aa-active:  #993D00;
+}
