@@ -1,3 +1,10 @@
+# User Academy Design System
+
+[![Deploy Storybook to GitHub Pages](https://github.com/MInerva-42exe/user-academy-design-system/actions/workflows/storybook.yml/badge.svg)](https://github.com/MInerva-42exe/user-academy-design-system/actions/workflows/storybook.yml)
+[![Storybook](https://img.shields.io/badge/Storybook-Live-FF4785)](https://minerva-42exe.github.io/user-academy-design-system/)
+
+Live Storybook: https://minerva-42exe.github.io/user-academy-design-system/
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
