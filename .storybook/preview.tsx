@@ -1,47 +1,43 @@
-import React from 'react'
 import type { Preview } from '@storybook/react'
+import { Theme } from '@carbon/react'
 import '@carbon/styles/css/styles.css'
 import '../src/theme/tokens.css'
 import '../src/theme/manageengine.css'
 
 export const globalTypes = {
-  theme: {
+  brandTheme: {
     name: 'Theme',
-    description: 'Light/Dark theme',
-    defaultValue: 'light',
+    defaultValue: 'manageengine',
     toolbar: {
-      icon: 'mirror',
       items: [
-        { value: 'light', title: 'Light (manageengine)' },
-        { value: 'dark',  title: 'Dark (manageengine-dark)' },
+        { value: 'manageengine', title: 'Light (manageengine)' },
+        { value: 'manageengine-dark', title: 'Dark (manageengine-dark)' },
       ],
-      dynamicTitle: true,
     },
   },
   density: {
     name: 'Density',
-    description: 'Control size density',
     defaultValue: 'comfortable',
-    toolbar: {
-      icon: 'circlehollow',
-      items: [
-        { value: 'comfortable', title: 'Comfortable' },
-        { value: 'compact',     title: 'Compact' },
-      ],
-      dynamicTitle: true,
-    },
+    toolbar: { items: ['comfortable', 'compact'] },
   },
 }
 
 export const decorators = [
-  (Story, context) => {
-    const isDark = context.globals.theme === 'dark'
-    const dataTheme = isDark ? 'manageengine-dark' : 'manageengine'
-    const density = context.globals.density || 'comfortable'
+  (Story, ctx) => {
+    const brand =
+      (ctx.globals.brandTheme as 'manageengine' | 'manageengine-dark') ?? 'manageengine'
+    const carbonTheme = brand === 'manageengine-dark' ? 'g100' : 'g10'
+
     return (
-      <div data-carbon-theme={dataTheme} data-density={density} style={{ padding: 24 }}>
+      <Theme
+        theme={carbonTheme}
+        as="main"
+        data-carbon-theme={brand}
+        data-density={ctx.globals.density}
+        style={{ padding: 24 }}
+      >
         <Story />
-      </div>
+      </Theme>
     )
   },
 ]
