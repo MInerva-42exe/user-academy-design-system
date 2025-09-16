@@ -1,8 +1,8 @@
 import React from 'react'
 import type { Preview } from '@storybook/react'
 import '@carbon/styles/css/styles.css'
-import '@meua/theme/tokens.css'
-import '@meua/theme/manageengine.css'
+import '../src/theme/tokens.css'
+import '../src/theme/manageengine.css'
 
 export const globalTypes = {
   theme: {
