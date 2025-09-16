@@ -11,7 +11,8 @@
     "tokens": "style-dictionary build --config style-dictionary.config.js",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "lint:css": "stylelint \"src/**/*.css\" \"packages/**/*.css\""
+    "lint:css": "stylelint \"src/**/*.css\" \"packages/**/*.css\"",
+    "theme:sync": "mkdir -p packages/meua-theme/dist && cp -f src/theme/tokens.css packages/meua-theme/dist/tokens.css && cp -f src/theme/manageengine.css packages/meua-theme/dist/manageengine.css"
   },
   "dependencies": {
     "@carbon/react": "^1.91.0",
